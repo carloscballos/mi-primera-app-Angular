@@ -1,0 +1,20 @@
+<div class="d-flex border" [ngClass]="{'completed': item.completed}">
+    <div class="m-3 d-flex">
+        <input title="check" type="checkbox"[checked]="item.completed" (change)="onToggle(item)">        
+    </div>
+    <div class="m-3 d-flex w-50">
+        {{item.title}}
+    </div>
+    <div class="m-3 d-flex w-25" >
+        {{item.price |currency}}
+    </div>
+    <div class="m-3 d-flex w-25">
+        {{item.quantity}}
+    </div> 
+    <div class="m-3 d-flex text-success w-25">
+        {{(item.price * item.quantity | currency)}}
+    </div>    
+    <div class="m-3 d-flex">
+        <button (click)="onDelete(item)" class="btn btn-danger">Eliminar</button>
+    </div>    
+</div>

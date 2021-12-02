@@ -1,0 +1,20 @@
+<h2 class="text-center">Registre un nuevo artículo</h2>
+<form class="row w-50 p-2 m-auto bg-light" action="" (ngSubmit)="onSubmit()">    
+    <div class="col-12">
+        <label class="form-label" for="">Id del articulo</label>
+        <input class="text-center form-control w-25" type="text" name="id" [(ngModel)]="id">        
+    </div>
+    <div class="col-6">
+        <label class="form-label" for="">Nombre del articulo</label>
+        <input class="form-control" type="text" name="title" [(ngModel)]="title">
+    </div>
+    <div class="col-3">
+        <label class="form-label" for="">Precio</label>
+        <input class="form-control" type="text" name="price" [(ngModel)]="price">
+    </div>
+    <div class="col-3">
+        <label class="form-label" for="">Cantidad</label>
+        <input class="form-control" type="text" name="quantity" [(ngModel)]="quantity">
+    </div>
+    <input class="btn btn-success mt-3 " type="submit" value="Adicionar">
+</form>
